@@ -19,9 +19,9 @@
 
         default {
             bindings = <
-&trans  &mt ESC Q  &kp W  &kp E      &kp R      &kp T      &kp Y                 &kp U     &kp I      &kp O    &kp P     &trans
-&trans  &kp A      &kp S  &kp D      &kp F      &kp G      &kp H                 &kp J     &kp K      &kp L    &kp SEMI  &trans
-&trans  &kp Z      &kp X  &kp C      &kp V      &kp B      &kp N                 &kp M     &kp COMMA  &kp DOT  &kp FSLH  &trans
+&trans  &mt ESC Q  &kp W  &kp E      &kp R      &kp T      &kp Y                 &kp U     &kp I      &kp O                &kp P                        &trans
+&trans  &kp A      &kp S  &kp D      &kp F      &kp G      &kp H                 &kp J     &kp K      &kp L                &kp SEMI                     &trans
+&trans  &kp Z      &kp X  &kp C      &kp V      &kp B      &kp N                 &kp M     &kp COMMA  &mt LEFT_ALT PERIOD  &mt LEFT_CONTROL UNDERSCORE  &trans
                           &lt 1 TAB  &kp SPACE  &kp DEL    &mt LEFT_SHIFT ENTER  &kp BSPC  &trans
             >;
         };
