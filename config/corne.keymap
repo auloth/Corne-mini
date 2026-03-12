@@ -62,13 +62,23 @@
             key-positions = <14 15>;
         };
 
-        window_next {
+        right_monitor {
             bindings = <&kp LS(LG(RIGHT))>;
+            key-positions = <3 16>;
+        };
+
+        left_monitor {
+            bindings = <&kp LS(LG(LEFT_ARROW))>;
+            key-positions = <3 14>;
+        };
+
+        window_next_desktop {
+            bindings = <&kp LS(LG(PAGE_UP))>;
             key-positions = <27 28>;
         };
 
-        window_prev {
-            bindings = <&kp LS(LG(LEFT_ARROW))>;
+        window_prev_desktop {
+            bindings = <&kp LS(LG(PAGE_DOWN))>;
             key-positions = <26 27>;
         };
     };
