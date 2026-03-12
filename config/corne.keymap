@@ -81,6 +81,16 @@
             bindings = <&kp LS(LG(PAGE_DOWN))>;
             key-positions = <26 27>;
         };
+
+        snap_right {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <8 9>;
+        };
+
+        snap_left {
+            bindings = <&kp LG(LEFT_ARROW)>;
+            key-positions = <8 7>;
+        };
     };
 
     keymap {
