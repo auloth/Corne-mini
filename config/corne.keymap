@@ -44,7 +44,7 @@
 
         open_terminal {
             bindings = <&kp LC(LA(T))>;
-            key-positions = <8 7 9>;
+            key-positions = <3 2 4>;
         };
 
         switch_program {
@@ -90,6 +90,11 @@
         snap_left {
             bindings = <&kp LG(LEFT_ARROW)>;
             key-positions = <8 7>;
+        };
+
+        maximize {
+            bindings = <&kp LG(UP_ARROW)>;
+            key-positions = <9 7 8>;
         };
     };
 
