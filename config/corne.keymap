@@ -1,25 +1,92 @@
-/ {
+/*
+ * Clean working keymap for Corne Mini - compatible with ZMK
+ */
+
+ / {
     chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
 
     combos {
         compatible = "zmk,combos";
 
-        next_tab       { bindings = <&kp_tab>; key-positions = <20 21>; };
-        prev_tab       { bindings = <&kp_tab>; key-positions = <19 20>; };
-        new_tab        { bindings = <&kp_t>; key-positions = <33 32>; };
-        delete_tab     { bindings = <&kp_w>; key-positions = <32 31>; };
-        close_program  { bindings = <&kp_f4>; key-positions = <32 33 31>; };
-        open_terminal  { bindings = <&kp_t>; key-positions = <3 2 4>; };
-        switch_program { bindings = <&kp_tab>; key-positions = <19 20 21>; };
-        next_virtual   { bindings = <&kp_right>; key-positions = <16 15>; };
-        prev_virtual   { bindings = <&kp_left>; key-positions = <14 15>; };
-        right_monitor  { bindings = <&kp_right>; key-positions = <3 16>; };
-        left_monitor   { bindings = <&kp_left>; key-positions = <3 14>; };
-        window_next_desktop { bindings = <&kp_page_up>; key-positions = <27 28>; };
-        window_prev_desktop { bindings = <&kp_page_down>; key-positions = <26 27>; };
-        snap_right     { bindings = <&kp_right>; key-positions = <8 9>; };
-        snap_left      { bindings = <&kp_left>; key-positions = <8 7>; };
-        maximize       { bindings = <&kp_up>; key-positions = <9 7 8>; };
+        next_tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <20 21>;
+        };
+
+        prev_tab {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <19 20>;
+        };
+
+        new_tab {
+            bindings = <&kp LC(T)>;
+            key-positions = <33 32>;
+        };
+
+        delete_tab {
+            bindings = <&kp LC(W)>;
+            key-positions = <32 31>;
+        };
+
+        close_program {
+            bindings = <&kp LA(F4)>;
+            key-positions = <32 33 31>;
+        };
+
+        open_terminal {
+            bindings = <&kp LC(LA(T))>;
+            key-positions = <3 2 4>;
+        };
+
+        switch_program {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <19 20 21>;
+        };
+
+        next_virtual {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <16 15>;
+        };
+
+        prev_virtual {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <14 15>;
+        };
+
+        right_monitor {
+            bindings = <&kp LS(LG(RIGHT))>;
+            key-positions = <3 16>;
+        };
+
+        left_monitor {
+            bindings = <&kp LS(LG(LEFT))>;
+            key-positions = <3 14>;
+        };
+
+        window_next_desktop {
+            bindings = <&kp LS(LG(PAGE_UP))>;
+            key-positions = <27 28>;
+        };
+
+        window_prev_desktop {
+            bindings = <&kp LS(LG(PAGE_DOWN))>;
+            key-positions = <26 27>;
+        };
+
+        snap_right {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <8 9>;
+        };
+
+        snap_left {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <8 7>;
+        };
+
+        maximize {
+            bindings = <&kp LG(UP)>;
+            key-positions = <9 7 8>;
+        };
     };
 
     keymap {
@@ -27,28 +94,28 @@
 
         default {
             bindings = <
-                &trans  &mt_esc_q &kp_w &kp_e &kp_r &kp_t &kp_y &kp_u &kp_i &kp_o &kp_p &trans
-                &trans  &kp_a &kp_s &kp_d &kp_f &kp_g &kp_h &kp_j &kp_k &kp_l &kp_semi &trans
-                &trans  &kp_z &kp_x &kp_c &kp_v &kp_b &kp_n &kp_m &kp_comma &mt_left_alt_period &mt_left_control_underscore &trans
-                          &lt_1_tab &kp_space &kp_del &mt_left_shift_enter &kp_bspc &trans
+                &trans  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &trans
+                &trans  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT &trans
+                &trans  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp LCTL &kp LALT &kp DOT &trans
+                          &kp LGUI  &kp TAB  &kp SPACE  &kp ESC  &kp ENTER  &kp BSPC  &trans
             >;
         };
 
         layer_1 {
             bindings = <
-                &trans &trans &mkp_rclk &mmv_move_up &mkp_lclk &trans &trans &msc_scrl_up &kp_up &msc_scrl_down &trans &trans
-                &trans &trans &mmv_move_left &mmv_move_down &mmv_move_right &trans &bt_bt_clr &kp_left &kp_down &kp_right &trans &trans
-                &trans &trans &trans &trans &trans &trans &bt_bt_sel0 &bt_bt_sel1 &bt_bt_sel2 &bt_bt_sel3 &trans &trans
-                          &trans &trans &trans &trans &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_2 {
             bindings = <
-                &trans &kp_left_paren &kp_right_paren &kp_backslash &kp_pipe &kp_hash &kp_equal &kp_n7 &kp_n8 &kp_n9 &kp_plus &trans
-                &trans &mt_left_shift_left_bracket &kp_right_bracket &kp_excl &kp_question &kp_ampersand &kp_slash &kp_number_4 &kp_n5 &kp_number_6 &kp_n0 &trans
-                &trans &mt_left_ctrl_left_brace &kp_right_brace &kp_less_than &kp_greater_than &kp_at &kp_asterisk &kp_number_1 &kp_number_2 &kp_number_3 &kp_minus &trans
-                          &trans &trans &trans &trans &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
