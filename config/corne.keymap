@@ -14,6 +14,65 @@
 / {
     chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
 
+    combos {
+        compatible = "zmk,combos";
+
+        prev_tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <20 21>;
+        };
+
+        prev_tab {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <19 20>;
+        };
+
+        new_tab {
+            bindings = <&kp LC(T)>;
+            key-positions = <33 32>;
+        };
+
+        delete_tab {
+            bindings = <&kp LC(W)>;
+            key-positions = <32 31>;
+        };
+
+        close_program {
+            bindings = <&kp LA(F4)>;
+            key-positions = <32 33 31>;
+        };
+
+        open_terminal {
+            bindings = <&kp LC(LA(T))>;
+            key-positions = <8 7 9>;
+        };
+
+        switch_program {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <19 20 21>;
+        };
+
+        next_virtual {
+            bindings = <&kp LA(LC(RIGHT))>;
+            key-positions = <16 15>;
+        };
+
+        prev_virtual {
+            bindings = <&kp LC(LA(LEFT))>;
+            key-positions = <14 15>;
+        };
+
+        window_next {
+            bindings = <&kp LS(LG(RIGHT))>;
+            key-positions = <27 28>;
+        };
+
+        window_prev {
+            bindings = <&kp LS(LG(LEFT_ARROW))>;
+            key-positions = <26 27>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
