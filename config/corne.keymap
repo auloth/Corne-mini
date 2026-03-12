@@ -1,10 +1,8 @@
 /*
- * Clean keymap for Corne - compatible with Nick Coutsos Keymap Editor
+ * Clean working keymap for Corne Mini - compatible with ZMK
  */
 
-
-
-/ {
+ / {
     chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
 
     combos {
@@ -46,12 +44,12 @@
         };
 
         next_virtual {
-            bindings = <&kp LA(LC(RIGHT))>;
+            bindings = <&kp LA(RIGHT)>;
             key-positions = <16 15>;
         };
 
         prev_virtual {
-            bindings = <&kp LC(LA(LEFT))>;
+            bindings = <&kp LA(LEFT)>;
             key-positions = <14 15>;
         };
 
@@ -61,7 +59,7 @@
         };
 
         left_monitor {
-            bindings = <&kp LS(LG(LEFT_ARROW))>;
+            bindings = <&kp LS(LG(LEFT))>;
             key-positions = <3 14>;
         };
 
@@ -81,12 +79,12 @@
         };
 
         snap_left {
-            bindings = <&kp LG(LEFT_ARROW)>;
+            bindings = <&kp LG(LEFT)>;
             key-positions = <8 7>;
         };
 
         maximize {
-            bindings = <&kp LG(UP_ARROW)>;
+            bindings = <&kp LG(UP)>;
             key-positions = <9 7 8>;
         };
     };
@@ -96,28 +94,28 @@
 
         default {
             bindings = <
-&trans  &mt ESC Q  &kp W  &kp E      &kp R      &kp T      &kp Y                 &kp U     &kp I      &kp O                &kp P                        &trans
-&trans  &kp A      &kp S  &kp D      &kp F      &kp G      &kp H                 &kp J     &kp K      &kp L                &kp SEMI                     &trans
-&trans  &kp Z      &kp X  &kp C      &kp V      &kp B      &kp N                 &kp M     &kp COMMA  &mt LEFT_ALT PERIOD  &mt LEFT_CONTROL UNDERSCORE  &trans
-                          &lt 1 TAB  &kp SPACE  &kp DEL    &mt LEFT_SHIFT ENTER  &kp BSPC  &trans
+                &trans  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &trans
+                &trans  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT &trans
+                &trans  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp LCTL &kp LALT &kp DOT &trans
+                          &kp LGUI  &kp TAB  &kp SPACE  &kp ESC  &kp ENTER  &kp BSPC  &trans
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &trans    &trans        &msc SCRL_UP    &kp UP_ARROW    &msc SCRL_DOWN   &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &bt BT_CLR    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &trans  &trans
-                                &trans          &trans           &trans    &trans        &trans          &trans
+                &trans &trans &kp RC  &kp UP  &kp LC &trans &trans &kp SCRL_UP &kp UP &kp SCRL_DOWN &trans &trans
+                &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &bt BT_CLR &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+                &trans &trans &trans &trans &trans &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans &trans
+                          &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &kp PIPE          &kp HASH         &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &trans
-&trans  &mt LEFT_SHIFT LEFT_BRACKET  &kp RIGHT_BRACKET      &kp EXCL       &kp QUESTION      &kp AMPERSAND    &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0     &trans
-&trans  &mt LEFT_CONTROL LEFT_BRACE  &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN  &kp AT           &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS  &trans
-                                                            &trans         &trans            &trans           &trans        &trans        &trans
+                &trans &kp LEFT_PAREN &kp RIGHT_PAREN &kp BACKSLASH &kp PIPE &kp HASH &kp EQUAL &kp N7 &kp N8 &kp N9 &kp PLUS &trans
+                &trans &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp EXCL &kp QUESTION &kp AMPERSAND &kp SLASH &kp N4 &kp N5 &kp N6 &kp N0 &trans
+                &trans &kp LEFT_BRACE &kp RIGHT_BRACE &kp LESS &kp GREATER &kp AT &kp ASTERISK &kp N1 &kp N2 &kp N3 &kp MINUS &trans
+                          &trans &trans &trans &trans &trans &trans &trans
             >;
         };
     };
